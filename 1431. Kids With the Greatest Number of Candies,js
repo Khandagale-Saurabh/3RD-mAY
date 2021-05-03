@@ -1,0 +1,24 @@
+/**
+ * @param {number[]} candies
+ * @param {number} extraCandies
+ * @return {boolean[]}
+ */
+var kidsWithCandies = function(candies, extraCandies) 
+{
+    let max1=0
+   for(let i=0;i<candies.length;i++)
+       {
+            max1= Math.max(max1,candies[i]); 
+       }
+    console.log(max1)
+       for(let i=0;i<candies.length;i++)
+           {
+               if(candies[i]+ extraCandies>=max1)
+                  {
+                     candies[i]=true
+                  }
+               else
+                   candies[i]=false
+           }
+    return candies
+};
